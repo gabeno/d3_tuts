@@ -11,6 +11,14 @@
             d3.select('body')
                 .append('p')
                 .text('My new paragraph');
+
+            // data
+            var dataset = [ 5, 10, 15, 20, 25 ];
+            
+            // loading csv
+            d3.csv('sample_data.csv', function(data){
+                console.log(data);
+            });
         </script>
     </body>
 </html>
