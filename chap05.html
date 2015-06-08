@@ -16,8 +16,14 @@
             var dataset = [ 5, 10, 15, 20, 25 ];
             
             // loading csv
-            d3.csv('sample_data.csv', function(data){
-                console.log(data);
+            var csv_data; // global variable
+            d3.csv('sample_data.csv', function(err, data){
+                if (err) {
+                    console.log(err);
+                    return;
+                }
+                csv_data = data; // once loaded copy to dataset
+                console.log(csv_data);
             });
         </script>
     </body>
