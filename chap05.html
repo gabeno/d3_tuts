@@ -39,7 +39,7 @@
                     return d;
                 })
                 .style('color', function(d) {
-                    if (d > 15) {
+                    if (d % 2 !== 0) {
                         return 'red';
                     } else {
                         return 'black';
