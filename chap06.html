@@ -17,7 +17,12 @@
         <script type="text/javascript" src="lib/d3.js"></script>
         <script type="text/javascript">
             // Your beautiful D3 code will go here
-            var dataset = [5, 10, 15, 20, 25];
+            // var dataset = [5, 10, 15, 20, 25];
+            var dataset = [];
+            for (var i = 0; i < 25; i++) {
+                var num = Math.random() * 30;
+                dataset.push(num);
+            }
             d3.select('body')
                 .selectAll('div')
                 .data(dataset)
